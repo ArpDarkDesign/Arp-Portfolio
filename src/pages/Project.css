@@ -1,0 +1,128 @@
+/* Project.css */
+.container {
+  background-color: #1a1a1a; /* Dark background color */
+  color: #ffffff; /* White text color */
+  animation: randomColorChange 5s infinite; /* Random color change animation */
+  position: relative; /* Position for ghost animation */
+}
+
+@keyframes randomColorChange {
+  0% {
+    background-color: #1a1a1a;
+  }
+  25% {
+    background-color: #2d2d2d;
+  }
+  50% {
+    background-color: #3a3a3a;
+  }
+  75% {
+    background-color: #2d2d2d;
+  }
+  100% {
+    background-color: #1a1a1a;
+  }
+}
+
+.text-indigo-700 {
+  color: #ff4d6b; /* Adjust the color of the project title */
+}
+
+.bg-white {
+  background-color: #2d2d2d; /* Darker background for individual projects */
+}
+
+.text-gray-600 {
+  color: #b2b2b2; /* Lighter gray text color */
+}
+
+.text-gray-400 {
+  color: #666666; /* Medium gray text color */
+}
+
+.rounded-md {
+  border-radius: 8px; /* Slightly rounded corners for images */
+}
+
+.spooky-title {
+  /* Add styles for the title here */
+  color: #ff4444; /* Red color */
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow */
+}
+
+.spooky-card {
+  /* Add styles for the project cards here */
+  transition: transform 0.5s ease-in-out;
+}
+
+.spooky-card:hover {
+  /* Add hover styles for the project cards here */
+  transform: translateY(-5px);
+}
+
+.spooky-short-title {
+  color: #ff4444; /* Red color */
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow */
+  animation: spookyTitleAnimation 2s infinite alternate; /* Apply animation */
+}
+
+/* Define the animation keyframes */
+@keyframes spookyTitleAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px); /* Move the title slightly upwards */
+  }
+}
+
+/* Ghost animation */
+@keyframes ghostAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+/* Project.css */
+.spooky-text {
+  color: #ff4444; /* Red color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow */
+}
+
+.spooky-text:hover {
+  animation: shake 0.5s ease-in-out infinite; /* Add a shake animation on hover */
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

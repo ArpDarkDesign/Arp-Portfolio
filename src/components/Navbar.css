@@ -1,0 +1,119 @@
+.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: transparent; /* Add this line to set background to transparent */
+  transition: transform 0.3s ease;
+}
+
+.brand-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Brand text styling */
+.brand-text {
+  font-size: 2rem;
+  font-weight: 800;
+  position: relative;
+  color: #ffffff; /* Set the color to white */
+  z-index: 1; /* Ensure the text is on top of the glow effect */
+}
+
+.glow-effect {
+  background-image: linear-gradient(
+    to right,
+    #ffd700,
+    #ff0000,
+    #ffd700
+  ); /* Golden to red gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: glow-animation 2s infinite alternate-reverse,
+    pulse-animation 2s infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+@keyframes glow-animation {
+  from {
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.9), 0 0 20px rgba(255, 0, 0, 0.9),
+      0 0 30px rgba(255, 215, 0, 0.9);
+  }
+  to {
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.9), 0 0 30px rgba(255, 0, 0, 0.9),
+      0 0 45px rgba(255, 215, 0, 0.9);
+  }
+}
+
+@keyframes pulse-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Navigation links styling */
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: #a8a8a8;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.active-link {
+  color: #4a90e2;
+}
+
+/* Example: Smooth transition for hover effects */
+.nav-link,
+.brand-logo {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover,
+.brand-logo:hover {
+  transform: translateY(-3px);
+  color: #7b7d80;
+}
+
+/* Example: Hover effect for navigation links */
+.nav-link:hover {
+  transform: scale(1.1);
+}
+
+/* Example: Fade-in animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 3s forwards;
+}
+
+@keyframes fadeInAnimation {
+  to {
+    opacity: 1.5;
+  }
+}
