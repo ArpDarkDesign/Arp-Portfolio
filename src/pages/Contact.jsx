@@ -170,7 +170,7 @@ const Contact = () => {
       <div className="lg:w-1/2 w-full lg:h-auto -[550px] h-[350px]  relative">
         <div
           className="absolute inset-0 bg-cover bg-center z-0"
-          style={{ backgroundImage: 'url("src/imp/3d/op.jpg")' }}
+          style={{ backgroundImage: 'url("./src/pages/op.jpg")' }}
         ></div>
         <Canvas camera={{ position: [0, 0, 5], fov: 75, near: 0.1, far: 1000 }}>
           <directionalLight position={[-0.1, -50, -5]} intensity={2} />

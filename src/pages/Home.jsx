@@ -131,7 +131,7 @@ const Home = () => {
   const [popupContent, setPopupContent] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
   const [islandPaused, setIslandPaused] = useState(false);
-  const [audio] = useState(new Audio("../src/imp/op.mp3"));
+  const [audio] = useState(new Audio("src/pages/op.mp3"));
   const [audioPlaying, setAudioPlaying] = useState(false);
   const navigate = useNavigate();
   const islandControls = useAnimation(); // Create an instance of useAnimation
